@@ -103,18 +103,28 @@ Send shutdown request to mqnamesrv(36664) OK
 sh mqadmin  clusterList -n 192.168.1.23:9876
 
 # Folder Structure
-+ bean: 
-    - ElasticSearchHelper.java   
-    ElasticSearch rest client, implement index create/delete, data insert/delete, ES start/stop etc...
-    - RocketMQConsumerHelper.java  
-    RocketMQ Consumer, subscribe / unsub topic, Callback when receive message
-    - RocketMQProducer.java
-    RocketMQ Producer, send message sync/async/oneway
-+ service:
-    - Es2rocketMQService.java  
-    Create thread task to streaming data from ES to RocketMQT
-    - Es2rocketMQTask.java  
-    Task implementation for Poll ElasticSearch by configed index, then send to configed RocketMQ topic.
++ main
+    + bean: 
+        - ElasticSearchHelper.java   
+        ElasticSearch rest client, implement index create/delete, data insert/delete, ES start/stop etc...
+        - RocketMQConsumerHelper.java  
+        RocketMQ Consumer, subscribe / unsub topic, Callback when receive message
+        - RocketMQProducer.java
+        RocketMQ Producer, send message sync/async/oneway
+    + service:
+        - Es2rocketMQService.java  
+        Create thread task to streaming data from ES to RocketMQT
+        - Es2rocketMQTask.java  
+        Task implementation for Poll ElasticSearch by configed index, then send to configed RocketMQ topic.
+    + Es2rocketmqApplication.java:  
+    Es2rocketmqApplication extend from CommandLineRunner, it is main() entry
++ test
+    - ElasticSearchApiTests.java  
+    Unit test for ElasticSearch Api functions
+    - RocketMQConsumerHelperTest.java  
+    Unit test for RocketMQ Consumer functions
+    - RocketMQProducerHelperTest.java  
+    Unit test for RocketMQ Producer functions
 
 # Issues
 1. RocketMQ latest version 4.7.0 have bug, when use   
