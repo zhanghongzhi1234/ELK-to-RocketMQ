@@ -1,4 +1,4 @@
-package com.bigdata.springboot.es2rocketmq;
+package com.bigdata.springboot;
 
 import com.bigdata.springboot.service.Es2rocketMQService;
 import org.springframework.beans.factory.annotation.Value;
