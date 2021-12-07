@@ -116,7 +116,7 @@ sh mqadmin  clusterList -n 192.168.1.23:9876
     - Es2rocketMQTask.java  
     Task implementation for Poll ElasticSearch by configed index, then send to configed RocketMQ topic.
 
-# Issue meet in development:
+# Issues:
 1. RocketMQ latest version 4.7.0 have bug, when use   
 #./mqadmin topicList -n 127.0.0.1:9876  
 to see all topic list, it pop error, change back to 4.3.0, no such error
