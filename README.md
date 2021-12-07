@@ -32,8 +32,8 @@ ActiveMQ, RocketMQ, RabbitMQ, Kafka are all message queues
 Features | ActiveMQ | RabbitMQ | RocketMQ | kafka
 ---- | ---- | ---- |---- | ----
 Development language | java | erlang | java | scala
-Single machine throughput | Class 10,000 | Class 10,000 | Class 100,000 | Class 100,000
-Timeliness | ms class | us class | ms class | within ms class
+Single machine throughput | 10,000 level | 10,000 level | 100,000 level | 100,000 level
+Timeliness | ms level | us level | ms level | within ms level
 Availability | High (master-slave architecture) | High (master-slave architecture) | Very high (distributed architecture) | Very high (distributed architecture)
 Functional characteristics | Mature products, which are used in many companies; there are more documents; various protocol support is better. | Based on erlang development, so the concurrency is very strong, the performance is extremely good, and the delay is very low; the management interface is richer. | MQ function comparison Complete and good scalability. | Only the main MQ functions are supported. Some functions such as message query and message backtracking are not provided. After all, they are prepared for big data and are widely used in the field of big data.
 
